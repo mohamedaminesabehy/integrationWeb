@@ -8,7 +8,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex flex-col min-h-screen font-poppins">
+<body class="flex flex-col min-h-screen font-poppins bg-white">
   <!-- Header -->
   <header class="w-full border-b border-gray-200">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -63,9 +63,9 @@
   
     <!-- Cart Content -->
     <div class="w-full mb-8 flex justify-center">
-      <div class="w-full lg:w-[635px]">
+      <div class="w-full max-w-3xl">
         <!-- Cart Headers -->
-        <div class="hidden sm:grid grid-cols-4 gap-4 bg-[#F5F5F5] h-[75px] items-center px-6 rounded-t-lg mb-4">
+        <div class="hidden sm:grid grid-cols-4 gap-4 bg-[#F5F5F5] h-[60px] md:h-[75px] items-center px-4 md:px-6 rounded-t-lg mb-4">
           <div class="text-sm font-medium text-gray-600">Product</div>
           <div class="text-sm font-medium text-gray-600">Price</div>
           <div class="text-sm font-medium text-gray-600">Quantity</div>
@@ -73,16 +73,33 @@
         </div>
   
         <!-- Cart Items -->
-        <div class="bg-white">
+        <div class="bg-white space-y-4">
           <!-- Cart Item 1 -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 items-center py-4 px-6 border-b relative mb-4 bg-[#F5F5F5] rounded-lg">
-            <div class="flex items-center space-x-4">
-              <img src="img/pc3.png" alt="Monitor" class="w-16 h-16 object-cover">
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 md:gap-4 items-center py-4 px-4 md:px-6 border-b relative mb-4 bg-[#F5F5F5] rounded-lg">
+            <!-- Mobile Product Header -->
+            <div class="sm:hidden font-medium text-gray-600 mb-2">Product</div>
+            
+            <!-- Product -->
+            <div class="flex items-center space-x-3 col-span-1">
+              <img src="img/pc3.png" alt="Monitor" class="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded">
+              <span class="text-sm sm:hidden">PC Portable Gamer ASUS</span>
             </div>
-            <div class="text-gray-900 item-price" data-price="1920">1920 TDN</div>
+            
+            <!-- Mobile Price Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Price</div>
+            
+            <!-- Price -->
+            <div class="text-gray-900 item-price flex items-center" data-price="1920">
+              <span>1920 TDN</span>
+            </div>
+            
+            <!-- Mobile Quantity Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Quantity</div>
+            
+            <!-- Quantity -->
             <div class="flex items-center">
-              <div class="relative">
-                <select class="quantity-select appearance-none border rounded px-2 sm:px-4 py-2 pr-8 w-16 sm:w-24 focus:outline-none text-sm sm:text-base">
+              <div class="relative w-full sm:w-auto">
+                <select class="quantity-select appearance-none border rounded px-2 py-2 pr-8 w-full sm:w-20 md:w-24 focus:outline-none text-sm">
                   <option value="1">01</option>
                   <option value="2">02</option>
                   <option value="3">03</option>
@@ -94,24 +111,47 @@
                 </div>
               </div>
             </div>
-            <div class="flex items-center justify-between">
-              <span class="item-subtotal">1920 TDN</span>
+            
+            <!-- Mobile Subtotal Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Subtotal</div>
+            
+            <!-- Subtotal -->
+            <div class="flex items-center justify-between sm:justify-start">
+              <span class="item-subtotal font-medium">1920 TDN</span>
             </div>
-            <!-- Delete Button -->
-            <button class="absolute top-2 right-2 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center">
+            
+            <!-- Delete Button - Repositioned for better mobile experience -->
+            <button class="absolute top-3 right-3 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center">
               <i class="fas fa-times text-xs"></i>
             </button>
           </div>
-  
+
           <!-- Cart Item 2 -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 items-center py-4 px-6 border-b relative mb-4 bg-[#F5F5F5] rounded-lg">
-            <div class="flex items-center space-x-4">
-              <img src="img/img (1).png" alt="Gaming Console" class="w-16 h-16 object-cover">
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 md:gap-4 items-center py-4 px-4 md:px-6 border-b relative mb-4 bg-[#F5F5F5] rounded-lg">
+            <!-- Mobile Product Header -->
+            <div class="sm:hidden font-medium text-gray-600 mb-2">Product</div>
+            
+            <!-- Product -->
+            <div class="flex items-center space-x-3 col-span-1">
+              <img src="img/img (1).png" alt="Gaming Console" class="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded">
+              <span class="text-sm sm:hidden">Gaming Console</span>
             </div>
-            <div class="text-gray-900 item-price" data-price="1670">1670 TDN</div>
+            
+            <!-- Mobile Price Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Price</div>
+            
+            <!-- Price -->
+            <div class="text-gray-900 item-price flex items-center" data-price="1670">
+              <span>1670 TDN</span>
+            </div>
+            
+            <!-- Mobile Quantity Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Quantity</div>
+            
+            <!-- Quantity -->
             <div class="flex items-center">
-              <div class="relative">
-                <select class="quantity-select appearance-none border rounded px-2 sm:px-4 py-2 pr-8 w-16 sm:w-24 focus:outline-none text-sm sm:text-base">
+              <div class="relative w-full sm:w-auto">
+                <select class="quantity-select appearance-none border rounded px-2 py-2 pr-8 w-full sm:w-20 md:w-24 focus:outline-none text-sm">
                   <option value="1">01</option>
                   <option value="2">02</option>
                   <option value="3">03</option>
@@ -123,14 +163,28 @@
                 </div>
               </div>
             </div>
-            <div class="flex items-center justify-between">
-              <span class="item-subtotal">1670 TDN</span>
+            
+            <!-- Mobile Subtotal Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Subtotal</div>
+            
+            <!-- Subtotal -->
+            <div class="flex items-center justify-between sm:justify-start">
+              <span class="item-subtotal font-medium">1670 TDN</span>
             </div>
-            <!-- Delete Button -->
-            <button class="absolute top-2 right-2 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center">
+            
+            <!-- Delete Button - Repositioned for better mobile experience -->
+            <button class="absolute top-3 right-3 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center">
               <i class="fas fa-times text-xs"></i>
             </button>
           </div>
+        </div>
+        
+        <!-- Empty Cart Message (hidden by default) -->
+        <div class="hidden text-center py-8">
+          <p class="text-gray-500 mb-4">Your cart is empty</p>
+          <a href="#" class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+            Continue Shopping
+          </a>
         </div>
       </div>
     </div>
@@ -183,7 +237,7 @@
           <div class="space-y-4">
             <div class="flex justify-between items-center pb-4 border-b-2 border-black">
               <span class="text-gray-600">Subtotal:</span>
-              <span class="font-medium" id="cart-subtotal">2340 dt</span>
+              <span class="font-medium" id="cart-subtotal">3590 dt</span>
             </div>
             <div class="flex justify-between items-center pb-4 border-b-2 border-black text-gray-600">
               <span>Free Delivery remain:</span>
@@ -191,7 +245,7 @@
             </div>
             <div class="pt-4 border-t-2 border-black flex justify-between items-center">
               <span class="font-medium">Total:</span>
-              <span class="font-medium" id="cart-total">2340 dt</span>
+              <span class="font-medium" id="cart-total">3590 dt</span>
             </div>
           </div>
       
@@ -203,120 +257,147 @@
     </div>
   </main>
 
- <!-- Footer -->
- <footer class="bg-black text-white py-8 sm:py-10">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-      <!-- Column 1 -->
-      <div>
-        <h3 class="text-lg font-medium mb-4">Exclusive</h3>
-        <p class="mb-4">Subscribe</p>
-        <div class="flex">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            class="bg-transparent border border-white px-3 py-2 text-sm w-full"
-          >
-          <button class="bg-transparent border border-white border-l-0 px-3">
-            <i class="fas fa-arrow-right h-5 w-5"></i>
-          </button>
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 sm:py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <!-- Column 1 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Exclusive</h3>
+          <p class="mb-4">Subscribe</p>
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="bg-transparent border border-white px-3 py-2 text-sm w-full"
+            >
+            <button class="bg-transparent border border-white border-l-0 px-3">
+              <i class="fas fa-arrow-right h-5 w-5"></i>
+            </button>
+          </div>
         </div>
-      </div>
 
-      <!-- Column 2 -->
-      <div>
-        <h3 class="text-lg font-medium mb-4">Support</h3>
-        <ul class="space-y-2">
-          <li>ESPRIT</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb9894958f9a988fbb9e839a968b979ed5989496">[email&#160;protected]</a></li>
-          <li>+216 98 888 888</li>
-        </ul>
-      </div>
+        <!-- Column 2 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Support</h3>
+          <ul class="space-y-2">
+            <li>ESPRIT</li>
+            <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb9894958f9a988fbb9e839a968b979ed5989496">[email&#160;protected]</a></li>
+            <li>+216 98 888 888</li>
+          </ul>
+        </div>
 
-      <!-- Column 3 -->
-      <div>
-        <h3 class="text-lg font-medium mb-4">Account</h3>
-        <ul class="space-y-2">
-          <li>My Account</li>
-          <li>Login / Register</li>
-          <li>Cart</li>
-          <li>Wishlist</li>
-          <li>Shop</li>
-        </ul>
-      </div>
+        <!-- Column 3 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Account</h3>
+          <ul class="space-y-2">
+            <li>My Account</li>
+            <li>Login / Register</li>
+            <li>Cart</li>
+            <li>Wishlist</li>
+            <li>Shop</li>
+          </ul>
+        </div>
 
-      <!-- Column 4 -->
-      <div>
-        <h3 class="text-lg font-medium mb-4">Quick Link</h3>
-        <ul class="space-y-2">
-          <li>Privacy Policy</li>
-          <li>Terms Of Use</li>
-          <li>FAQ</li>
-          <li>Contact</li>
-        </ul>
-      </div>
+        <!-- Column 4 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Quick Link</h3>
+          <ul class="space-y-2">
+            <li>Privacy Policy</li>
+            <li>Terms Of Use</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+          </ul>
+        </div>
 
-      <!-- Column 5 -->
-      <div>
-        <h3 class="text-lg font-medium mb-4">Download App</h3>
-        <div class="flex space-x-4">
-          <img 
-            src="img/Qrcode 1.png" 
-            alt="QR Code" 
-            class="h-24 w-24"
-          >
-          <div class="flex flex-col space-y-2">
+        <!-- Column 5 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Download App</h3>
+          <div class="flex space-x-4">
             <img 
-              src="img/googleplay.png" 
-              alt="Google Play" 
-              class="h-10"
+              src="img/Qrcode 1.png" 
+              alt="QR Code" 
+              class="h-24 w-24"
             >
-            <img 
-              src="img/AppStore.png" 
-              alt="App Store" 
-              class="h-13"
-            >
+            <div class="flex flex-col space-y-2">
+              <img 
+                src="img/googleplay.png" 
+                alt="Google Play" 
+                class="h-10"
+              >
+              <img 
+                src="img/AppStore.png" 
+                alt="App Store" 
+                class="h-13"
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Social Icons -->
-    <div class="flex items-center justify-center sm:justify-end space-x-4 mt-8">
-      <i class="fab fa-facebook h-6 w-6"></i>
-      <i class="fab fa-twitter h-6 w-6"></i>
-      <i class="fab fa-instagram h-6 w-6"></i>
-      <i class="fab fa-linkedin h-6 w-6"></i>
+      <!-- Social Icons -->
+      <div class="flex items-center justify-center sm:justify-end space-x-4 mt-8">
+        <i class="fab fa-facebook h-6 w-6"></i>
+        <i class="fab fa-twitter h-6 w-6"></i>
+        <i class="fab fa-instagram h-6 w-6"></i>
+        <i class="fab fa-linkedin h-6 w-6"></i>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- JavaScript -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
       const quantitySelects = document.querySelectorAll('.quantity-select');
       const cartSubtotal = document.getElementById('cart-subtotal');
       const cartTotal = document.getElementById('cart-total');
+      const deleteButtons = document.querySelectorAll('.bg-primary.rounded-full');
 
       function updateTotals() {
         let subtotal = 0;
 
         quantitySelects.forEach(select => {
-          const price = parseFloat(select.closest('.grid').querySelector('.item-price').getAttribute('data-price'));
+          const priceElement = select.closest('.grid').querySelector('.item-price');
+          if (!priceElement) return;
+          
+          const price = parseFloat(priceElement.getAttribute('data-price'));
           const quantity = parseInt(select.value);
           const itemSubtotal = price * quantity;
 
           // Mettre à jour le sous-total de l'article
-          select.closest('.grid').querySelector('.item-subtotal').textContent = `${itemSubtotal} TDN`;
+          const subtotalElement = select.closest('.grid').querySelector('.item-subtotal');
+          if (subtotalElement) {
+            subtotalElement.textContent = `${itemSubtotal} TDN`;
+          }
 
           // Ajouter au sous-total global
           subtotal += itemSubtotal;
         });
 
         // Mettre à jour le sous-total et le total du panier
-        cartSubtotal.textContent = `${subtotal} dt`;
-        cartTotal.textContent = `${subtotal} dt`;
+        if (cartSubtotal) cartSubtotal.textContent = `${subtotal} dt`;
+        if (cartTotal) cartTotal.textContent = `${subtotal} dt`;
       }
+
+      // Gérer la suppression d'articles
+      deleteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const cartItem = this.closest('.grid');
+          if (cartItem) {
+            cartItem.remove();
+            updateTotals();
+            
+            // Vérifier si le panier est vide
+            const remainingItems = document.querySelectorAll('.grid.grid-cols-1.sm\\:grid-cols-4');
+            if (remainingItems.length === 0) {
+              const emptyCartMessage = document.querySelector('.hidden.text-center.py-8');
+              if (emptyCartMessage) {
+                emptyCartMessage.classList.remove('hidden');
+              }
+            }
+          }
+        });
+      });
 
       // Ajouter un écouteur d'événement à chaque sélecteur de quantité
       quantitySelects.forEach(select => {
@@ -329,4 +410,3 @@
   </script>
 </body>
 </html>
-
