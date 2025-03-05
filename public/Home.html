@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Wizards</title>
+  <link rel="icon"  href="img/logow.png" />
+  <link href="style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="w-full border-b border-gray-200 ">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="img/logow.png" alt="Design Wizards Logo" class="h-12 w-auto">
+      </div>
+      <nav class="hidden md:flex items-center space-x-8 ml-[550px]">
+        <a href="#" class="text-sm font-medium border-b border-black">Home</a>
+        <a href="#" class="text-sm font-medium">Contact</a>
+        <a href="#" class="text-sm font-medium">About</a>
+        <a href="#" class="text-sm font-medium">Exchange</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="SEARCH"
+            class="bg-gray-100 rounded-full py-1 px-4 text-sm w-32 md:w-40"
+          >
+          <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-500"></i>
+        </div>
+        <button class="p-1">
+          <i class="fas fa-heart h-5 w-5"></i>
+        </button>
+        <button class="p-1 relative">
+          <i class="fas fa-shopping-cart h-5 w-5"></i>
+          <span class="absolute -top-1 -right-1 bg-[#8E1616] text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+            2
+          </span>
+        </button>
+        <button class="p-1">
+          <i class="fas fa-user h-5 w-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 md:px-[75px]">
+    <!-- Hero Section -->
+    <section class="mt-6 grid grid-cols-1 md:grid-cols-12 gap-4">
+      <div class="md:col-span-3 bg-gray-200 p-4">
+        <ul class="space-y-2">
+          <li class="font-medium">Joypad</li>
+          <li class="font-medium">Keyboard</li>
+          <li class="font-medium">Mouse</li>
+          <li class="font-medium">Screen</li>
+          <li class="font-medium">Headset</li>
+          <li class="font-medium">Unit</li>
+          <li class="font-medium">Mouse pad</li>
+          <li class="font-medium">Speakers</li>
+          <li class="mt-4">
+            <button class="bg-primary text-white text-xs px-4 py-1 rounded">see more</button>
+          </li>
+        </ul>
+      </div>
+      <div class="md:col-span-9 bg-[#C4AF7B] relative overflow-hidden">
+        <img 
+          src="img/manette.png" 
+          alt="Featured Gaming Controller" 
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 h-auto max-h-[80%] max-w-[60%] object-contain"
+        >
+      </div>
+    </section>
+
+    <!-- Flash Sales Section -->
+    <section class="mt-12">
+      <div class="flex items-center mb-4">
+        <div class="w-6 h-6 bg-primary mr-2"></div>
+        <span class="text-sm font-medium text-primary">Today's</span>
+      </div>
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Flash Sales</h2>
+        <div class="flex space-x-4">
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center bg-[#F5F5F5] rounded mr-1">
+              <span class="font-bold">03</span>
+            </div>
+            <span class="text-xs">Days</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center bg-[#F5F5F5] rounded mr-1">
+              <span class="font-bold">23</span>
+            </div>
+            <span class="text-xs">Hours</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center bg-[#F5F5F5] rounded mr-1">
+              <span class="font-bold">19</span>
+            </div>
+            <span class="text-xs">Minutes</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center bg-[#F5F5F5] rounded mr-1">
+              <span class="font-bold">56</span>
+            </div>
+            <span class="text-xs">Seconds</span>
+          </div>
+        </div>
+        <div class="flex space-x-2">
+          <button class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Flash Sales Products -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Product 1 -->
+        <div class="bg-gray-50 p-4 relative group h-[320px] flex flex-col">
+          <div class="absolute top-2 left-2 bg-primary text-white text-xs px-2 py-1 rounded">-40%</div>
+          <button class="absolute top-2 right-2 bg-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="h-[200px] flex items-center justify-center">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GP11_PRD3%201-leirExhdDbAznKR8fOHvrj0AeJPbX2.png" alt="HAVIT HV-G92 Gamepad" class="h-40 object-contain">
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-sm font-medium">HAVIT HV-G92 Gamepad</h3>
+            <div class="flex items-center mt-1">
+              <span class="font-bold text-primary mr-2">120DT</span>
+              <span class="text-gray-500 line-through text-sm">160DT</span>
+            </div>
+            <div class="flex items-center mt-1 text-[#FFD700]">
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <span class="text-gray-500 text-xs ml-1">(88)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-gray-50 p-4 relative group h-[320px] flex flex-col">
+          <button class="absolute top-2 right-2 bg-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="h-[200px] flex items-center justify-center">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GP11_PRD3%201-leirExhdDbAznKR8fOHvrj0AeJPbX2.png" alt="GP11 Shooter USB Gamepad" class="h-40 object-contain">
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-sm font-medium">GP11 Shooter USB Gamepad</h3>
+            <div class="flex items-center mt-1">
+              <span class="font-bold text-primary mr-2">650DT</span>
+            </div>
+            <div class="flex items-center mt-1 text-[#FFD700]">
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <span class="text-gray-500 text-xs ml-1">(55)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-gray-50 p-4 relative group h-[320px] flex flex-col">
+          <div class="absolute top-2 left-2 bg-primary text-white text-xs px-2 py-1 rounded">-35%</div>
+          <button class="absolute top-2 right-2 bg-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="h-[200px] flex items-center justify-center">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GP11_PRD3%201-leirExhdDbAznKR8fOHvrj0AeJPbX2.png" alt="AK-900 Wired Keyboard" class="h-40 object-contain">
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-sm font-medium">AK-900 Wired Keyboard</h3>
+            <div class="flex items-center mt-1">
+              <span class="font-bold text-primary mr-2">960DT</span>
+              <span class="text-gray-500 line-through text-sm">1160DT</span>
+            </div>
+            <div class="flex items-center mt-1 text-[#FFD700]">
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <span class="text-gray-500 text-xs ml-1">(75)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-gray-50 p-4 relative group h-[320px] flex flex-col">
+          <button class="absolute top-2 right-2 bg-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="h-[200px] flex items-center justify-center">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ideapad-gaming-3i-01-500x500%201-y15NO8yWaG1NulN7ImpQcUOCUlwfFf.png" alt="ASUS FHD Gaming Laptop" class="h-40 object-contain">
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-sm font-medium">ASUS FHD Gaming Laptop</h3>
+            <div class="flex items-center mt-1">
+              <span class="font-bold text-primary mr-2">700DT</span>
+            </div>
+            <div class="flex items-center mt-1 text-[#FFD700]">
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <span class="text-gray-500 text-xs ml-1">(325)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-8">
+        <button class="bg-primary text-white px-6 py-2 text-sm">View All Products</button>
+      </div>
+    </section>
+
+    <!-- Browse By Category -->
+    <section class="mt-16">
+      <div class="flex items-center mb-4">
+        <div class="w-6 h-6 bg-primary mr-2"></div>
+        <span class="text-sm font-medium text-primary">Categories</span>
+      </div>
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Browse By Category</h2>
+        <div class="flex space-x-2">
+          <button class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Icons -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+        <div class="border border-gray-200 p-4 flex flex-col items-center justify-center h-32">
+          <i class="fas fa-mobile-alt text-2xl mb-2"></i>
+          <p class="text-center text-sm">gaming phones</p>
+        </div>
+        <div class="border border-gray-200 p-4 flex flex-col items-center justify-center h-32">
+          <i class="fas fa-desktop text-2xl mb-2"></i>
+          <p class="text-center text-sm">Computers</p>
+        </div>
+        <div class="border border-gray-200 p-4 flex flex-col items-center justify-center h-32">
+          <i class="fas fa-headphones text-2xl mb-2"></i>
+          <p class="text-center text-sm">HeadPhones</p>
+        </div>
+        <div class="border border-gray-200 p-4 flex flex-col items-center justify-center h-32">
+          <i class="fas fa-gamepad text-2xl mb-2"></i>
+          <p class="text-center text-sm">JoyPads</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Selling Products -->
+    <section class="mt-16">
+      <div class="flex items-center mb-4">
+        <div class="w-6 h-6 bg-primary mr-2"></div>
+        <span class="text-sm font-medium text-primary">This Month</span>
+      </div>
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Best Selling Products</h2>
+        <button class="bg-primary text-white px-4 py-2 text-sm">View All</button>
+      </div>
+
+      <!-- Best Selling Products Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Product 1 -->
+        <div class="bg-gray-50 p-4 relative group h-[320px] flex flex-col">
+          <button class="absolute top-2 right-2 bg-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="h-[200px] flex items-center justify-center">
+            <img src="img/manette.png" alt="RGB liquid CPU Cooler" class="h-40 object-contain">
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-sm font-medium">RGB liquid CPU Cooler</h3>
+            <div class="flex items-center mt-1">
+              <span class="font-bold text-primary mr-2">160DT</span>
+              <span class="text-gray-500 line-through text-sm">170DT</span>
+            </div>
+            <div class="flex items-center mt-1 text-[#FFD700]">
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <span class="text-gray-500 text-xs ml-1">(65)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-gray-50 p-4 relative group h-[320px] flex flex-col">
+          <button class="absolute top-2 right-2 bg-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="h-[200px] flex items-center justify-center">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GP11_PRD3%201-leirExhdDbAznKR8fOHvrj0AeJPbX2.png" alt="GP11 Shooter USB Gamepad" class="h-40 object-contain">
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-sm font-medium">GP11 Shooter USB Gamepad</h3>
+            <div class="flex items-center mt-1">
+              <span class="font-bold text-primary mr-2">120DT</span>
+              <span class="text-gray-500 line-through text-sm">160DT</span>
+            </div>
+            <div class="flex items-center mt-1 text-[#FFD700]">
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <span class="text-gray-500 text-xs ml-1">(65)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-gray-50 p-4 relative group h-[320px] flex flex-col">
+          <button class="absolute top-2 right-2 bg-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="h-[200px] flex items-center justify-center">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GP11_PRD3%201-leirExhdDbAznKR8fOHvrj0AeJPbX2.png" alt="HAVIT HV-G92 Gamepad" class="h-40 object-contain">
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-sm font-medium">HAVIT HV-G92 Gamepad</h3>
+            <div class="flex items-center mt-1">
+              <span class="font-bold text-primary mr-2">120DT</span>
+              <span class="text-gray-500 line-through text-sm">160DT</span>
+            </div>
+            <div class="flex items-center mt-1 text-[#FFD700]">
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <span class="text-gray-500 text-xs ml-1">(65)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-gray-50 p-4 relative group h-[320px] flex flex-col">
+          <button class="absolute top-2 right-2 bg-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="h-[200px] flex items-center justify-center">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GP11_PRD3%201-leirExhdDbAznKR8fOHvrj0AeJPbX2.png" alt="HAVIT HV-G92 Gamepad" class="h-40 object-contain">
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-sm font-medium">HAVIT HV-G92 Gamepad</h3>
+            <div class="flex items-center mt-1">
+              <span class="font-bold text-primary mr-2">120DT</span>
+              <span class="text-gray-500 line-through text-sm">160DT</span>
+            </div>
+            <div class="flex items-center mt-1 text-[#FFD700]">
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <i class="fas fa-star text-xs"></i>
+              <span class="text-gray-500 text-xs ml-1">(65)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrival -->
+    <section class="mt-16">
+      <div class="flex items-center mb-4">
+        <div class="w-6 h-6 bg-primary mr-2"></div>
+        <span class="text-sm font-medium text-primary">Featured</span>
+      </div>
+      <h2 class="text-2xl font-bold mb-6">New Arrival</h2>
+
+      <!-- New Arrival Grid -->
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-12 md:col-span-4 bg-black text-white relative h-[400px]">
+          <img 
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%20684-56OovC66cmrczavwvw5tSoNtBZwVk0.png" 
+            alt="PlayStation 5" 
+            class="w-full h-full object-cover"
+          >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold">PlayStation 5</h3>
+            <p class="text-sm mb-2">Black and White version of the PS5 coming out on sale.</p>
+            <a href="#" class="text-sm underline">Shop Now</a>
+          </div>
+        </div>
+
+        <div class="col-span-12 md:col-span-8 grid grid-cols-12 gap-4">
+          <div class="col-span-12 bg-gray-100 relative h-[195px]">
+            <img 
+              src="https://mk-media.mytek.tn/media/catalog/product/cache/8be3f98b14227a82112b46963246dfe1/c/l/clavier-gamer-sans-fil-spirit-of-gamer-xpert-k600-rgb-gris.jpg" 
+              alt="Gaming Mouse" 
+              class="w-full h-full object-cover"
+            >
+          </div>
+          <div class="col-span-6 bg-gray-100 relative h-[195px]">
+            <img 
+              src="https://mk-media.mytek.tn/media/catalog/product/cache/8be3f98b14227a82112b46963246dfe1/s/o/souris-gamer-filaire-star-wave-gm1096-retroeclairage-rgb-noir.jpg" 
+              alt="Keyboard" 
+              class="w-full h-full object-cover"
+            >
+          </div>
+          <div class="col-span-6 bg-gray-100 relative h-[195px]">
+            <img 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%20687-oSnIweCip14CJ5bdYgE7GxFA2Z1mSr.png" 
+              alt="GTA San Andreas" 
+              class="w-full h-full object-cover"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="mt-16 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-truck text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">FREE AND FAST DELIVERY</h3>
+          <p class="text-sm text-gray-600">Free delivery for all orders over $140</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-headset text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">24/7 CUSTOMER SERVICE</h3>
+          <p class="text-sm text-gray-600">Friendly 24/7 customer support</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2">MONEY BACK GUARANTEE</h3>
+          <p class="text-sm text-gray-600">We return money within 30 days</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div>
+          <h3 class="text-lg font-medium mb-4">Exclusive</h3>
+          <p class="mb-4">Subscribe</p>
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="bg-transparent border border-white px-3 py-2 text-sm w-full"
+            >
+            <button class="bg-transparent border border-white border-l-0 px-3">
+              <i class="fas fa-arrow-right h-5 w-5"></i>
+            </button>
+          </div>
+        </div>
+  
+        <div>
+          <h3 class="text-lg font-medium mb-4">Support</h3>
+          <ul class="space-y-2">
+            <li>ESPRIT</li>
+            <li>designwizards@gmail.com</li>
+            <li>+216 98 888 888</li>
+          </ul>
+        </div>
+  
+        <div>
+          <h3 class="text-lg font-medium mb-4">Account</h3>
+          <ul class="space-y-2">
+            <li>My Account</li>
+            <li>Login / Register</li>
+            <li>Cart</li>
+            <li>Wishlist</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+  
+        <div>
+          <h3 class="text-lg font-medium mb-4">Quick Link</h3>
+          <ul class="space-y-2">
+            <li>Privacy Policy</li>
+            <li>Terms Of Use</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+  
+        <div>
+          <h3 class="text-lg font-medium mb-4">Download App</h3>
+          <div class="flex space-x-4">
+            <img 
+              src="img/Qrcode 1.png" 
+              alt="QR Code" 
+              class="h-24 w-24"
+            >
+            <div class="flex flex-col space-y-2">
+              <img 
+                src="img/googleplay.png" 
+                alt="Google Play" 
+                class="h-10"
+              >
+              <img 
+                src="img/AppStore.png" 
+                alt="App Store" 
+                class="h-13"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flex items-end justify-end space-x-4 mt-8">
+        <i class="fab fa-facebook h-6 w-6"></i>
+        <i class="fab fa-twitter h-6 w-6"></i>
+        <i class="fab fa-instagram h-6 w-6"></i>
+        <i class="fab fa-linkedin h-6 w-6"></i>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
