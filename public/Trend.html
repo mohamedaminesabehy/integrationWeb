@@ -8,6 +8,7 @@
   <link href="style.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
+<body>
 <header class="w-full border-b border-gray-200">
   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
     <div class="flex items-center">
@@ -43,17 +44,112 @@
     </div>
   </div>
 </header>
-<body class="flex flex-col min-h-screen">
-    
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
 
-</body>
-<!-- Footer -->
+<!-- Trend Section -->
+<section class="container mx-auto py-10 px-6">
+  <h2 class="text-2xl font-bold mb-6">Trend</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Product 1: Gaming Keyboard -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+        <img src="./img/Trend/1.webp" alt="RGB Mechanical Keyboard" class="w-full h-54 object-cover">
+        <button class="absolute bottom-0 left-0 w-full bg-red-700 text-white py-2 font-semibold">
+          Visit the product
+        </button>
+      </div>
+      <div class="p-4">
+        <div class="flex justify-between items-center text-lg font-semibold">
+          <h3 class="text-gray-900">RGB Mechanical Keyboard</h3>
+          <p class="text-black font-bold">80DT</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2: Gaming Mouse -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+        <img src="./img/Trend/2.webp" alt="Wireless Gaming Mouse" class="w-full h-54 object-cover">
+        <button class="absolute bottom-0 left-0 w-full bg-red-700 text-white py-2 font-semibold">
+          Visit the product
+        </button>
+      </div>
+      <div class="p-4">
+        <div class="flex justify-between items-center text-lg font-semibold">
+          <h3 class="text-gray-900">Wireless Gaming Mouse</h3>
+          <p class="text-black font-bold">60DT</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3: Gaming Headset -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+        <img src="./img/Trend/3.webp" alt="Surround Gaming Headset" class="w-full h-54 object-cover">
+        <button class="absolute bottom-0 left-0 w-full bg-red-700 text-white py-2 font-semibold">
+          Visit the product
+        </button>
+      </div>
+      <div class="p-4">
+        <div class="flex justify-between items-center text-lg font-semibold">
+          <h3 class="text-gray-900">Surround Gaming Headset</h3>
+          <p class="text-black font-bold">90DT</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4: Compact Gaming Keyboard -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+        <img src="./img/Trend/4.webp" alt="Compact RGB Keyboard" class="w-full h-54 object-cover">
+        <button class="absolute bottom-0 left-0 w-full bg-red-700 text-white py-2 font-semibold">
+          Visit the product
+        </button>
+      </div>
+      <div class="p-4">
+        <div class="flex justify-between items-center text-lg font-semibold">
+          <h3 class="text-gray-900">Compact RGB Keyboard</h3>
+          <p class="text-black font-bold">75DT</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5: Advanced Gaming Mouse -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+        <img src="./img/Trend/5.webp" alt="Ergonomic Gaming Mouse" class="w-full h-54 object-cover">
+        <button class="absolute bottom-0 left-0 w-full bg-red-700 text-white py-2 font-semibold">
+          Visit the product
+        </button>
+      </div>
+      <div class="p-4">
+        <div class="flex justify-between items-center text-lg font-semibold">
+          <h3 class="text-gray-900">Ergonomic Gaming Mouse</h3>
+          <p class="text-black font-bold">55DT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="flex justify-center mt-6">
+    <div class="flex items-center space-x-2 border border-gray-300 px-4 py-2 rounded-lg shadow-sm bg-white">
+      <button class="text-gray-600 hover:text-black">&lt;</button>
+      <span class="text-black font-semibold">1</span>
+      <span class="text-gray-600">-</span>
+      <span class="text-black font-semibold">2</span>
+      <span class="text-gray-600">-</span>
+      <span class="text-black font-semibold">3</span>
+      <span class="text-gray-600">-</span>
+      <span class="text-black font-semibold">4</span>
+      <button class="text-gray-600 hover:text-black">&gt;</button>
+    </div>
+  </div>
+
+</section>
+
+
+
   <!-- Footer -->
   <footer class="bg-black text-white py-10">
     <div class="container mx-auto px-4">
@@ -141,5 +237,6 @@
       </div>
     </div>
   </footer>
+</body>
 
 </html>
