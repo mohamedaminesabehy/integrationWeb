@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Wizards</title>
+  <link rel="icon" href="img/logow.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen font-poppins bg-white">
+  <!-- Header -->
+  <header class="w-full border-b border-gray-200">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="img/logow.png" alt="Design Wizards Logo" class="h-12 w-auto">
+      </div>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden">
+        <i class="fas fa-bars h-6 w-6"></i>
+      </button>
+      
+      <nav class="hidden md:flex items-center space-x-4 lg:space-x-8 lg:ml-[550px]">
+        <a href="#" class="text-sm font-medium border-b border-black">Home</a>
+        <a href="#" class="text-sm font-medium">Contact</a>
+        <a href="#" class="text-sm font-medium">About</a>
+        <a href="#" class="text-sm font-medium">Exchange</a>
+      </nav>
+      <div class="flex items-center space-x-2 sm:space-x-4">
+        <div class="relative hidden sm:block">
+          <input
+            type="text"
+            placeholder="SEARCH"
+            class="bg-gray-100 rounded-full py-1 px-4 text-sm w-24 md:w-32 lg:w-40"
+          >
+          <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-500"></i>
+        </div>
+        <button class="p-1 hidden sm:block">
+          <i class="fas fa-heart h-5 w-5"></i>
+        </button>
+        <button class="p-1 relative">
+          <i class="fas fa-shopping-cart h-5 w-5"></i>
+          <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+            2
+          </span>
+        </button>
+        <button class="p-1">
+          <i class="fas fa-user h-5 w-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-8 relative">
+    <!-- Breadcrumb -->
+    <div class="flex items-center space-x-2 mb-6 sm:mb-12">
+      <a href="#" class="text-gray-400 hover:text-gray-600">Home</a>
+      <span class="text-gray-400">/</span>
+      <span class="text-black">Cart</span>
+    </div>
+  
+    <!-- Cart Content -->
+    <div class="w-full mb-8 flex justify-center">
+      <div class="w-full max-w-3xl">
+        <!-- Cart Headers -->
+        <div class="hidden sm:grid grid-cols-4 gap-4 bg-[#F5F5F5] h-[60px] md:h-[75px] items-center px-4 md:px-6 rounded-t-lg mb-4">
+          <div class="text-sm font-medium text-gray-600">Product</div>
+          <div class="text-sm font-medium text-gray-600">Price</div>
+          <div class="text-sm font-medium text-gray-600">Quantity</div>
+          <div class="text-sm font-medium text-gray-600">Subtotal</div>
+        </div>
+  
+        <!-- Cart Items -->
+        <div class="bg-white space-y-4">
+          <!-- Cart Item 1 -->
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 md:gap-4 items-center py-4 px-4 md:px-6 border-b relative mb-4 bg-[#F5F5F5] rounded-lg">
+            <!-- Mobile Product Header -->
+            <div class="sm:hidden font-medium text-gray-600 mb-2">Product</div>
+            
+            <!-- Product -->
+            <div class="flex items-center space-x-3 col-span-1">
+              <img src="img/pc3.png" alt="Monitor" class="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded">
+              <span class="text-sm sm:hidden">PC Portable Gamer ASUS</span>
+            </div>
+            
+            <!-- Mobile Price Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Price</div>
+            
+            <!-- Price -->
+            <div class="text-gray-900 item-price flex items-center" data-price="1920">
+              <span>1920 TDN</span>
+            </div>
+            
+            <!-- Mobile Quantity Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Quantity</div>
+            
+            <!-- Quantity -->
+            <div class="flex items-center">
+              <div class="relative w-full sm:w-auto">
+                <select class="quantity-select appearance-none border rounded px-2 py-2 pr-8 w-full sm:w-20 md:w-24 focus:outline-none text-sm">
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Mobile Subtotal Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Subtotal</div>
+            
+            <!-- Subtotal -->
+            <div class="flex items-center justify-between sm:justify-start">
+              <span class="item-subtotal font-medium">1920 TDN</span>
+            </div>
+            
+            <!-- Delete Button - Repositioned for better mobile experience -->
+            <button class="absolute top-3 right-3 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center">
+              <i class="fas fa-times text-xs"></i>
+            </button>
+          </div>
+
+          <!-- Cart Item 2 -->
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 md:gap-4 items-center py-4 px-4 md:px-6 border-b relative mb-4 bg-[#F5F5F5] rounded-lg">
+            <!-- Mobile Product Header -->
+            <div class="sm:hidden font-medium text-gray-600 mb-2">Product</div>
+            
+            <!-- Product -->
+            <div class="flex items-center space-x-3 col-span-1">
+              <img src="img/img (1).png" alt="Gaming Console" class="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded">
+              <span class="text-sm sm:hidden">Gaming Console</span>
+            </div>
+            
+            <!-- Mobile Price Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Price</div>
+            
+            <!-- Price -->
+            <div class="text-gray-900 item-price flex items-center" data-price="1670">
+              <span>1670 TDN</span>
+            </div>
+            
+            <!-- Mobile Quantity Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Quantity</div>
+            
+            <!-- Quantity -->
+            <div class="flex items-center">
+              <div class="relative w-full sm:w-auto">
+                <select class="quantity-select appearance-none border rounded px-2 py-2 pr-8 w-full sm:w-20 md:w-24 focus:outline-none text-sm">
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Mobile Subtotal Header -->
+            <div class="sm:hidden font-medium text-gray-600 mt-2">Subtotal</div>
+            
+            <!-- Subtotal -->
+            <div class="flex items-center justify-between sm:justify-start">
+              <span class="item-subtotal font-medium">1670 TDN</span>
+            </div>
+            
+            <!-- Delete Button - Repositioned for better mobile experience -->
+            <button class="absolute top-3 right-3 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center">
+              <i class="fas fa-times text-xs"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Empty Cart Message (hidden by default) -->
+        <div class="hidden text-center py-8">
+          <p class="text-gray-500 mb-4">Your cart is empty</p>
+          <a href="#" class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+            Continue Shopping
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Lower Section -->
+    <div class="flex flex-col md:flex-row justify-center items-center md:items-start space-y-8 md:space-y-0 md:space-x-8 mt-8 md:mt-12">
+      <!-- Messages (Left) -->
+      <div class="space-y-4 w-full md:w-1/3 max-w-md order-2 md:order-1">
+        <!-- Message 1 -->
+        <div class="border rounded-lg p-4 sm:p-6 text-center">
+          <div class="flex items-center justify-center mb-2">
+            <i class="fas fa-exclamation-triangle text-primary mr-2"></i>
+            <span class="font-medium text-xl sm:text-2xl">Message</span>
+          </div>
+          <p class="text-lg sm:text-2xl">
+            If you buy within 24 hours, we'll give you a 10% discount on the total of your cart
+          </p>
+        </div>
+  
+        <!-- Message 2 -->
+        <div class="border rounded-lg p-4 sm:p-6 text-center">
+          <div class="flex items-center justify-center mb-2">
+            <i class="fas fa-exclamation-triangle text-primary mr-2"></i>
+            <span class="font-medium text-xl sm:text-2xl">Message</span>
+          </div>
+          <p class="text-lg sm:text-2xl">
+            <span class="underline">Add another 50 TND to your cart to qualify</span><br/>
+            <span class="underline">for free shipping!</span>
+          </p>
+        </div>
+      </div>
+  
+      <!-- Center Image -->
+      <div class="hidden md:flex justify-center w-full md:w-1/3 order-1 md:order-2">
+        <img class="w-[150px] h-[200px] lg:w-[223px] lg:h-[273px] mt-[57px]" src="img/follow_the_signs_40dp_B7B7B7_FILL0_wght400_GRAD0_opsz40 1.png" alt="Exit Sign">
+      </div>
+  
+      <!-- Cart Total Section (Right) -->
+      <div class="w-full md:w-1/3 max-w-md order-3">
+        <div class="rounded-xl p-4 sm:p-6 w-full" style="box-shadow: inset 0 0 0 2px #000000;">
+          <div class="flex items-center justify-between mb-6 h-auto sm:h-[85px]">
+            <h2 class="text-xl font-medium">Cart Total</h2>
+            <div class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-truck mr-2"></i>
+              Free Delivery
+            </div>
+          </div>
+      
+          <!-- Lignes ajoutées ici -->
+          <div class="space-y-4">
+            <div class="flex justify-between items-center pb-4 border-b-2 border-black">
+              <span class="text-gray-600">Subtotal:</span>
+              <span class="font-medium" id="cart-subtotal">3590 dt</span>
+            </div>
+            <div class="flex justify-between items-center pb-4 border-b-2 border-black text-gray-600">
+              <span>Free Delivery remain:</span>
+              <span>0000dt</span>
+            </div>
+            <div class="pt-4 border-t-2 border-black flex justify-between items-center">
+              <span class="font-medium">Total:</span>
+              <span class="font-medium" id="cart-total">3590 dt</span>
+            </div>
+          </div>
+      
+          <button class="w-full bg-primary text-white py-3 rounded-lg mt-6 hover:bg-opacity-90 transition-colors text-sm sm:text-base font-medium">
+            Procees to checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 sm:py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <!-- Column 1 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Exclusive</h3>
+          <p class="mb-4">Subscribe</p>
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="bg-transparent border border-white px-3 py-2 text-sm w-full"
+            >
+            <button class="bg-transparent border border-white border-l-0 px-3">
+              <i class="fas fa-arrow-right h-5 w-5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Support</h3>
+          <ul class="space-y-2">
+            <li>ESPRIT</li>
+            <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb9894958f9a988fbb9e839a968b979ed5989496">[email&#160;protected]</a></li>
+            <li>+216 98 888 888</li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Account</h3>
+          <ul class="space-y-2">
+            <li>My Account</li>
+            <li>Login / Register</li>
+            <li>Cart</li>
+            <li>Wishlist</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Quick Link</h3>
+          <ul class="space-y-2">
+            <li>Privacy Policy</li>
+            <li>Terms Of Use</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <!-- Column 5 -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Download App</h3>
+          <div class="flex space-x-4">
+            <img 
+              src="img/Qrcode 1.png" 
+              alt="QR Code" 
+              class="h-24 w-24"
+            >
+            <div class="flex flex-col space-y-2">
+              <img 
+                src="img/googleplay.png" 
+                alt="Google Play" 
+                class="h-10"
+              >
+              <img 
+                src="img/AppStore.png" 
+                alt="App Store" 
+                class="h-13"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex items-center justify-center sm:justify-end space-x-4 mt-8">
+        <i class="fab fa-facebook h-6 w-6"></i>
+        <i class="fab fa-twitter h-6 w-6"></i>
+        <i class="fab fa-instagram h-6 w-6"></i>
+        <i class="fab fa-linkedin h-6 w-6"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const quantitySelects = document.querySelectorAll('.quantity-select');
+      const cartSubtotal = document.getElementById('cart-subtotal');
+      const cartTotal = document.getElementById('cart-total');
+      const deleteButtons = document.querySelectorAll('.bg-primary.rounded-full');
+
+      function updateTotals() {
+        let subtotal = 0;
+
+        quantitySelects.forEach(select => {
+          const priceElement = select.closest('.grid').querySelector('.item-price');
+          if (!priceElement) return;
+          
+          const price = parseFloat(priceElement.getAttribute('data-price'));
+          const quantity = parseInt(select.value);
+          const itemSubtotal = price * quantity;
+
+          // Mettre à jour le sous-total de l'article
+          const subtotalElement = select.closest('.grid').querySelector('.item-subtotal');
+          if (subtotalElement) {
+            subtotalElement.textContent = `${itemSubtotal} TDN`;
+          }
+
+          // Ajouter au sous-total global
+          subtotal += itemSubtotal;
+        });
+
+        // Mettre à jour le sous-total et le total du panier
+        if (cartSubtotal) cartSubtotal.textContent = `${subtotal} dt`;
+        if (cartTotal) cartTotal.textContent = `${subtotal} dt`;
+      }
+
+      // Gérer la suppression d'articles
+      deleteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const cartItem = this.closest('.grid');
+          if (cartItem) {
+            cartItem.remove();
+            updateTotals();
+            
+            // Vérifier si le panier est vide
+            const remainingItems = document.querySelectorAll('.grid.grid-cols-1.sm\\:grid-cols-4');
+            if (remainingItems.length === 0) {
+              const emptyCartMessage = document.querySelector('.hidden.text-center.py-8');
+              if (emptyCartMessage) {
+                emptyCartMessage.classList.remove('hidden');
+              }
+            }
+          }
+        });
+      });
+
+      // Ajouter un écouteur d'événement à chaque sélecteur de quantité
+      quantitySelects.forEach(select => {
+        select.addEventListener('change', updateTotals);
+      });
+
+      // Initialiser les totaux au chargement de la page
+      updateTotals();
+    });
+  </script>
+</body>
+</html>
